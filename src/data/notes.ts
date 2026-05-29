@@ -17,8 +17,8 @@ export const notes: Note[] = [
     summary:
       "インストールから初回起動まで。最初に /init で CLAUDE.md を作っておくと文脈共有が楽になる。",
     body: [
-      "まずグローバルにインストールして、プロジェクトのルートで起動した。",
-      "code:npm install -g @anthropic-ai/claude-code\ncd my-project\nclaude",
+      "公式のネイティブインストーラで導入して、プロジェクトのルートで起動した。Node.js の準備が要らないのが楽だった。",
+      "code:curl -fsSL https://claude.ai/install.sh | bash\ncd my-project\nclaude",
       "起動後すぐに /init を実行すると、リポジトリを解析して CLAUDE.md を生成してくれる。これがあると以降の会話で文脈をいちいち説明しなくて済む。",
       "気づき: いきなり大きな変更を頼むより、まず「計画を立てて」と頼んで段取りを確認してから着手させるほうが事故が少ない。",
     ],

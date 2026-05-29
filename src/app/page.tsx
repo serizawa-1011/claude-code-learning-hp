@@ -4,6 +4,13 @@ import Term from "@/components/Term";
 
 const sections = [
   {
+    href: "/learn",
+    icon: "📚",
+    title: "教科書",
+    description:
+      "入門から上級まで全18章。Claude Code を体系的にマスターする本編。",
+  },
+  {
     href: "/guide",
     icon: "📘",
     title: "使い方",
@@ -49,20 +56,20 @@ export default function Home() {
         <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
           Claude Code を
           <br />
-          <span className="text-coral">学びながら整理する</span>ノート
+          <span className="text-coral">入門から上級まで</span>マスターする
         </h1>
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
           <Term word="ターミナル" />
           で動く AI コーディング
           <Term word="エージェント" />、Claude Code。
-          使い方・コマンド・気づき・サンプルを 1 か所にまとめています。
+          全18章の教科書で、はじめての人でも「使いこなし」まで体系的に学べます。
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="/guide"
+            href="/learn"
             className="rounded-lg bg-coral px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-coral-deep"
           >
-            使い方を見る
+            教科書を読む
           </a>
           <a
             href="/reference"
@@ -83,7 +90,7 @@ export default function Home() {
         </p>
         <CodeBlock
           terminal
-          code={`npm install -g @anthropic-ai/claude-code
+          code={`curl -fsSL https://claude.ai/install.sh | bash
 cd your-project
 claude`}
         />

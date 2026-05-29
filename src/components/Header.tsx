@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
+  { href: "/learn", label: "教科書" },
   { href: "/guide", label: "使い方" },
   { href: "/reference", label: "コマンド" },
   { href: "/notes", label: "学習ノート" },

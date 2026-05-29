@@ -36,14 +36,17 @@ export default function GuidePage() {
       <section className="mt-12">
         <h2 className="text-2xl font-semibold">1. インストール</h2>
         <p className="mt-3 leading-relaxed text-ink-soft">
-          まず <Term word="Node.js" /> を用意したうえで、{" "}
-          <Term word="npm" /> を使って{" "}
-          <Term word="グローバルインストール" />
-          します。下のコマンドを <Term word="ターミナル" /> に打ち込みます。
+          公式の <Term word="ネイティブインストーラ" /> を使うのが一番簡単です。{" "}
+          <Term word="Node.js" /> の事前準備は不要で、下のコマンドを{" "}
+          <Term word="ターミナル" /> に打ち込むだけで導入できます（macOS / Linux / WSL）。
         </p>
-        <CodeBlock terminal code="npm install -g @anthropic-ai/claude-code" />
+        <CodeBlock terminal code="curl -fsSL https://claude.ai/install.sh | bash" />
         <p className="text-sm text-ink-soft">
-          ※ 先頭の「$」は入力する必要はありません。「ここから先がコマンドですよ」という目印です。
+          ※ 先頭の「$」は入力する必要はありません。「ここから先がコマンドですよ」という目印です。Windows の場合は PowerShell で{" "}
+          <code className="rounded bg-cream-deep px-1.5 py-0.5 font-mono text-xs text-coral-deep">
+            irm https://claude.ai/install.ps1 | iex
+          </code>{" "}
+          を使います。
         </p>
       </section>
 
