@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf9f5;
+  --color-cream-deep: #f5f1ea;
+  --color-coral: #d97757;
+  --color-coral-deep: #c15f3c;
+  --color-coral-soft: #f3e3da;
+  --color-ink: #1f1e1d;
+  --color-ink-soft: #6b6862;
+  --color-line: #e8e2d6;
+  --color-terminal: #1f1e1d;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", Menlo,
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-coral);
+  color: #fff;
+}
+
+/* スクロール時にヘッダー高さ分のオフセットを確保 */
+:target {
+  scroll-margin-top: 90px;
+}
